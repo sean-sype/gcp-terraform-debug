@@ -1,0 +1,59 @@
+google_compute_global_forwarding_rule.defaultport80: Creating...
+  ip_address:        "" => "35.239.23.21"
+  ip_protocol:       "" => "TCP"
+  label_fingerprint: "" => "<computed>"
+  name:              "" => "default-port-80"
+  port_range:        "" => "80"
+  project:           "" => "<computed>"
+  self_link:         "" => "<computed>"
+  target:            "" => "https://www.googleapis.com/compute/v1/projects/*****/global/targetHttpProxies/test-proxy"
+2018-10-31T10:54:30.599-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: 2018/10/31 10:54:30 [DEBUG] Google API Response Details:
+2018-10-31T10:54:30.599-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: ---[ RESPONSE ]--------------------------------------
+2018-10-31T10:54:30.599-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: HTTP/2.0 400 Bad Request
+2018-10-31T10:54:30.599-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: Alt-Svc: quic=":443"; ma=2592000; v="44,43,39,35"
+2018-10-31T10:54:30.599-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: Cache-Control: private, max-age=0
+2018-10-31T10:54:30.599-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: Content-Type: application/json; charset=UTF-8
+2018-10-31T10:54:30.599-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: Date: Wed, 31 Oct 2018 14:54:30 GMT
+2018-10-31T10:54:30.599-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: Expires: Wed, 31 Oct 2018 14:54:30 GMT
+2018-10-31T10:54:30.599-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: Server: GSE
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: Vary: Origin
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: Vary: X-Origin
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: X-Content-Type-Options: nosniff
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: X-Frame-Options: SAMEORIGIN
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: X-Xss-Protection: 1; mode=block
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe:
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: {
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe:  "error": {
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe:   "errors": [
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe:    {
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe:     "domain": "global",
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe:     "reason": "invalid",
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe:     "message": "Invalid value for field 'resource.IPAddress': '35.239.23.21'. Invalid IP address specified."
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe:    }
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe:   ],
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe:   "code": 400,
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe:   "message": "Invalid value for field 'resource.IPAddress': '35.239.23.21'. Invalid IP address specified."
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe:  }
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: }
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe:
+2018-10-31T10:54:30.600-0400 [DEBUG] plugin.terraform-provider-google_v1.19.1_x4.exe: -----------------------------------------------------
+2018/10/31 10:54:30 [TRACE] root: eval: *terraform.EvalWriteState
+2018/10/31 10:54:30 [TRACE] root: eval: *terraform.EvalApplyProvisioners
+2018/10/31 10:54:30 [TRACE] root: eval: *terraform.EvalIf
+2018/10/31 10:54:30 [TRACE] root: eval: *terraform.EvalWriteState
+2018/10/31 10:54:30 [TRACE] root: eval: *terraform.EvalWriteDiff
+2018/10/31 10:54:30 [TRACE] root: eval: *terraform.EvalApplyPost
+2018/10/31 10:54:30 [ERROR] root: eval: *terraform.EvalApplyPost, err: 1 error(s) occurred:
+
+* google_compute_global_forwarding_rule.defaultport80: Error creating Global Forwarding Rule: googleapi: Error 400: Invalid value for field 'resource.IPAddress': '35.239.23.21'. Invalid IP address specified., invalid
+2018/10/31 10:54:30 [ERROR] root: eval: *terraform.EvalSequence, err: 1 error(s) occurred:
+
+* google_compute_global_forwarding_rule.defaultport80: Error creating Global Forwarding Rule: googleapi: Error 400: Invalid value for field 'resource.IPAddress': '35.239.23.21'. Invalid IP address specified., invalid
+2018/10/31 10:54:30 [TRACE] [walkApply] Exiting eval tree: google_compute_global_forwarding_rule.defaultport80
+2018/10/31 10:54:30 [TRACE] dag/walk: upstream errored, not walking "provider.google (close)"
+2018/10/31 10:54:30 [TRACE] dag/walk: upstream errored, not walking "meta.count-boundary (count boundary fixup)"
+2018/10/31 10:54:30 [TRACE] dag/walk: upstream errored, not walking "root"
+2018/10/31 10:54:30 [TRACE] Preserving existing state lineage "90c1a1fa-4c59-8931-ebdb-3504c326d41a"
+2018/10/31 10:54:30 [TRACE] Preserving existing state lineage "90c1a1fa-4c59-8931-ebdb-3504c326d41a"
+2018/10/31 10:54:30 [TRACE] Preserving existing state lineage "90c1a1fa-4c59-8931-ebdb-3504c326d41a"
+2018/10/31 10:54:31 [DEBUG] plugin: waiting for all plugin processes to complete...
